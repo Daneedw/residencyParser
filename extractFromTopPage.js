@@ -22,7 +22,7 @@ chrome.storage.local.clear(function() {
         var programs = programIdList.map((program) => {return{href: "https://www.residencyexplorer.org/Program/GetById/"+program.id,name:program.name }});
      
      
-      chrome.storage.local.set({'programs': programs}, function() {console.log("links set!")});
+      chrome.storage.local.set({'links': programs}, function() {console.log("links set!")});
       
       // console.log(programs);
       // let firstThree = programs.filter((_, i) => i <=2)
