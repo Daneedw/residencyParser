@@ -29,6 +29,7 @@ chrome.storage.local.clear(function() {
       for (const program of programs) {
         await new Promise(resolve => setTimeout(resolve, 2000)); 
         window.open(program.href, '_blank'); 
+        
       }
          
     }

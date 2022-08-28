@@ -1,5 +1,5 @@
 let programs ={
-    "parsedProgram": [
+    "programs": [
         {
             "educationAndResearchEnvironment": [
                 {
@@ -65,12 +65,12 @@ let programs ={
                     "answer": "Yes"
                 },
                 {
+                    "question": "Academic support for USMLE Step 3 prep",
                     "answer": "Yes",
-                    "question": "Academic support for USMLE Step 3 prep"
                 },
                 {
+                    "question": "Health systems leadership skills curriculum",
                     "answer": "Yes",
-                    "question": "Health systems leadership skills curriculum"
                 }
             ],
             "minimumStep1ForInterview": {},
@@ -7538,13 +7538,13 @@ let programs ={
         }
     ]
 }
-let peb = programs.parsedProgram[0].programEmploymentBenefits;
+let peb = programs.programs[0].programEmploymentBenefits;
 //build header
 let header = `program name && region && Program Phone Number && program coordinator && program coordinator phone && program Director && program Email && ${peb[1].question} && ${peb[2].question} && ${peb[3].question} && ${peb[4].question} && ${peb[5].question} && ${peb[6].question} && ${peb[7].question} && ${peb[8].question} && ${peb[9].question} && ${peb[10].question} && ${peb[11].question} && ${peb[12].question}  && Has dedicated research rotation && # of weeks in required research rotation && Average hours per week in Year 1 that residents/fellow are expected to attend regularly scheduled lectures/conferences && Integrative medicine curriculum && Formal mentoring program && Formal program to assist residents/fellows in developing teaching skills && Formal program to foster interprofessional teamwork && Instruction in medical Spanish or other non-English language && Alternative/complementary medicine curriculum && Economics of health care systems curriculum && Debt management and financial counseling && International experience/global health && Resident/fellow retreats && Hospice/home care experience && MPH, MBA, PhD or other advanced degree training && Academic support for USMLE Step 3 prep && Health systems leadership skills curriculumHealth systems leadership skills curriculum && # of required letters of recommendation && Interviews available via web conferencing* && Average hours per week in Year 1 that residents work && Maximum consecutive hours resident is allowed to work in Year 1 Program allows residents/fellows beyond PGY1 to moonlight && Percentage of training spent by residents/fellows in Year 1 in hospital outpatient clinics in all teaching hospitals used && Percentage of training spent by residents/fellows in Year 1 in ambulatory nonhospital community-based settings not attached to any hospital
 `;
 
-for (let i = 0; i < programs.parsedProgram.length; i++) {
-    const p = programs.parsedProgram[i];
+for (let i = 0; i < programs.programs.length; i++) {
+    const p = programs.programs[i];
     let peb = p.programEmploymentBenefits;
     currentString=`${p.programName} && ${p.region} && ${p.programPhoneNumber} && ${p.programCoordinator} && ${p.programCoordinatorPhone} && ${p.programDirector} && ${p.programEmail} && ${peb[1].answer} && ${peb[2].answer} && ${peb[3].answer} && ${peb[4].answer} && ${peb[5].answer} && ${peb[6].answer} && ${peb[7].answer} && ${peb[8].answer} && ${peb[9].answer} && ${peb[10].answer} && ${peb[11].answer} && ${peb[12].answer} &&  }`
         

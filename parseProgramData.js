@@ -33,8 +33,8 @@ async function storeChrome(storageKey, passedInArr) {
         chrome.storage.local.set(jsonObj, function () {
             console.log("Saved a new array item");
 
-            console.log(jsonObj)
-            // window.open('', '_self').close()
+         
+            window.open('', '_self').close()
         });
     });
 }
@@ -98,7 +98,7 @@ console.log(practiceEnvironment);
     otherIMPORTANTInformation 
     };
     console.log(obj)
-    await storeChrome("parsedProgram", obj);
+    await storeChrome("programs", obj);
 
 }
 
