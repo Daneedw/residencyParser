@@ -38,14 +38,10 @@ let programEmploymentBenefits =  getSingleAnswerData(programEmploymentBenefitsTa
 
 
 let residentSalaryAndLeaveTable = findTableWithText("# of Paid Sick Days");
-let residentSalaryAndLeave = getMultiAnswerData(residentSalaryAndLeaveTable);
+let residentSalaryAndLeave = getSalaryAndLeaveData(residentSalaryAndLeaveTable);
 
 let otherIMPORTANTInformationTable = findTableWithText("# of required letters of recommendation");
 let otherIMPORTANTInformation = getSingleAnswerData(otherIMPORTANTInformationTable);
-
-
-
-
 
 
 function findTableWithText(text){
@@ -66,8 +62,5 @@ function getSalaryAndLeaveData(table){
 
                                                         }))
 }
-
-
-
 
 

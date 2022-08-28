@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+      <meta charset="UTF-8">
+   
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <style>
+      #runExtraction {
+      
+        margin-bottom: 20px;
+      
+      }
+      main{
+
+        width:600px;
+        margin:0 100px;
+
+      }
+
+      /* .card{
+        margin-bottom:1000px;
+
+      } */
+
+      
+
+    </style>
+  </head>
+  <body>
+    
+    <main >
+      <div class="container">
+
+        <div class="row">
+          <button id="runExtraction" class="btn btn-primary" disabled>download</button>
+        </div>
+
+        <div class="row">
+        <h4 id="tagStatus">  Current Tag: <label id="currentTag"></label></h4>
+        </div>
+        <div class="row">
+          <button id="saveTag" class="btn btn-primary">Save Current Tag Name:</button>
+          <input type="text" id="newTag"> 
+        </div>
+      
+
+      
+    </div>
+    </main>
+    <script src="popup.js" charset="utf-8" ></script>
+  </body>
+</html>

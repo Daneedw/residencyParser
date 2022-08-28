@@ -1,0 +1,48 @@
+{
+    "manifest_version": 2,
+  
+    "name": "Residency Pull",
+    "description": "Easily extract Residency data from residency explorer.",
+    "version": "1.94",
+  
+    "permissions": [
+      "clipboard-write",
+      "declarativeContent",
+      "storage"
+      ],
+    "page_action": {
+      "default_popup": "popup.html",
+      "default_icon": "ResidencyParser.png"
+     
+    },
+    
+    "content_scripts": [
+      {
+        "matches": [
+          "https://www.residencyexplorer.org/Program/GetById/*"
+         
+          
+        ],
+        "run_at": "document_idle",
+        "js": ["parseProgramData.js"]
+      },
+      {
+        "matches": [
+          "https://www.residencyexplorer.org/Explore"
+          
+        ],
+        "run_at": "document_idle",
+        "js": ["extractFromTopPage.js"]
+      }
+      
+    ]
+    ,
+    "background": {
+      "scripts": ["background.js"],
+      "persistent": false
+    }
+    
+  }
+
+
+  
